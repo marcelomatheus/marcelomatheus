@@ -1,25 +1,10 @@
 ##  Sobre mim
 
-Olá! Sou [Seu Nome], apaixonado por arquitetura e engenharia de software. Gosto de criar soluções elegantes e eficientes utilizando tecnologias como:
+Olá! Sou Marcelo, apaixonado por JavaScript e um entusiasta por Engenharia de Software e Desenvolvimento.
 
-* **JavaScript:** <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt="JavaScript" width="30" height="30"/>
-* **Java:** <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original.svg" alt="Java" width="30" height="30"/>
-* **TypeScript:** <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/typescript/typescript-original.svg" alt="TypeScript" width="30" height="30"/>
+<img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt="JavaScript" width="50" height="50"/> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original.svg" alt="Java" width="50" height="50"/><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/typescript/typescript-original.svg" alt="TypeScript" width="50" height="50"/><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/postgresql/postgresql-original.svg" alt="Postgresql" width="50" height="50"/><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mongodb/mongodb-original.svg" alt="MongoDB" width="50" height="50"/>
 
-![Seu Nome's GitHub stats](https://github-readme-stats.vercel.app/api?username=seu_username&show_icons=true&theme=tokyonight)
-
-**Sobre meus projetos:**
-
-[Descreva brevemente seus principais projetos, destacando as tecnologias utilizadas e os desafios superados.]
-
-**Quer colaborar?**
+![marcelomatheus](https://github-readme-stats.vercel.app/api?username=marcelomatheus&show_icons=true&theme=tokyonight)
 
 Fico aberto a novas oportunidades e colaborações. Sinta-se à vontade para me contactar!
 
-**Conecte-se comigo:**
-
-* **LinkedIn:** [Seu LinkedIn]
-* **Twitter:** [Seu Twitter] (opcional)
-
-**Tecnologias que adoro:**
-[Adicione aqui outras tecnologias que você domina ou tem interesse, como frameworks, bibliotecas, etc.]
