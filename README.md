@@ -1,5 +1,11 @@
 ##  About me
-#### I'm Marcelo Matheus, passionate about software development and engineering.
+Full Stack Developer with experience in web solutions and APIs, focused on the JavaScript and TypeScript ecosystem. Information Systems student at Unimontes, passionate about Software Engineering, system architecture, and best development practices.  
+
+I work on building web applications, handling front-end development with ReactJS and Next.js, as well as back-end development with Node.js, Express, and NestJS, always striving to balance quality, performance, and scalability. Additionally, I have the skills to design medium-scale systems, from database selection to cloud deployment.  
+
+I actively participate in community-driven initiatives such as Unicoder and the SBC Programming Marathon.  
+
+My goal is to leverage technology to transform ideas into solutions that positively impact people's lives. I am always open to new challenges and opportunities to learn, grow, and contribute as part of a team.
 #
 <div style="display: inline_block" align="center"><br>
 
