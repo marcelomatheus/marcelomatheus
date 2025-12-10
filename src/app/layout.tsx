@@ -3,7 +3,7 @@ import { Plus_Jakarta_Sans } from "next/font/google";
 import { LanguageProvider } from "@/contexts/LanguageContext";
 import { ParticlesBackground } from "@/components/motion/ParticlesBackground";
 import "./globals.css";
-import type { RootLayoutProps } from "./interfaces/layout";
+import type { RootLayoutProps } from "@/interfaces/layout";
 
 const jakarta = Plus_Jakarta_Sans({
   subsets: ["latin"],
