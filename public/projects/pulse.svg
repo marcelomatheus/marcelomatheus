@@ -1,0 +1,18 @@
+<svg width="640" height="360" viewBox="0 0 640 360" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Pulse Research cover">
+  <defs>
+    <linearGradient id="pulse-bg" x1="0" y1="0" x2="1" y2="0.8">
+      <stop offset="0%" stop-color="#11152c" />
+      <stop offset="100%" stop-color="#06060f" />
+    </linearGradient>
+    <linearGradient id="pulse-line" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#00d8ff" />
+      <stop offset="100%" stop-color="#7a5bff" />
+    </linearGradient>
+  </defs>
+  <rect width="640" height="360" rx="32" fill="url(#pulse-bg)" />
+  <polyline points="40,220 140,160 220,200 300,120 400,200 500,140 600,190" fill="none" stroke="url(#pulse-line)" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" />
+  <circle cx="300" cy="120" r="10" fill="#00d8ff" />
+  <circle cx="400" cy="200" r="7" fill="#7a5bff" />
+  <rect x="120" y="60" width="400" height="60" rx="16" fill="rgba(255,255,255,0.08)" />
+  <rect x="150" y="80" width="140" height="20" rx="10" fill="rgba(255,255,255,0.35)" />
+</svg>

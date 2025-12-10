@@ -1,0 +1,18 @@
+<svg width="640" height="360" viewBox="0 0 640 360" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Lumen Pay cover">
+  <defs>
+    <linearGradient id="lumen-bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0f1329" />
+      <stop offset="100%" stop-color="#090b17" />
+    </linearGradient>
+    <radialGradient id="lumen-grad" cx="70%" cy="30%" r="60%">
+      <stop offset="0%" stop-color="rgba(0,216,255,0.9)" />
+      <stop offset="100%" stop-color="rgba(0,216,255,0)" />
+    </radialGradient>
+  </defs>
+  <rect width="640" height="360" rx="32" fill="url(#lumen-bg)" />
+  <circle cx="440" cy="120" r="120" fill="url(#lumen-grad)" />
+  <rect x="120" y="120" width="400" height="140" rx="24" fill="rgba(255,255,255,0.06)" stroke="rgba(255,255,255,0.15)" />
+  <rect x="160" y="160" width="140" height="18" rx="9" fill="rgba(255,255,255,0.3)" />
+  <rect x="160" y="190" width="180" height="12" rx="6" fill="rgba(255,255,255,0.2)" />
+  <rect x="160" y="214" width="220" height="12" rx="6" fill="rgba(0,216,255,0.4)" />
+</svg>
