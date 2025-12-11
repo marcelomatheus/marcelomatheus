@@ -24,7 +24,7 @@ export function ParticlesBackground() {
       fpsLimit: 120,
       particles: {
         number: {
-          value: 100,
+          value: 200,
           density: { enable: true, width: 1200 },
         },
         color: {
@@ -70,7 +70,7 @@ export function ParticlesBackground() {
             mode: "attract",
             parallax: { enable: true, force: 60, smooth: 12 },
           },
-          onClick: { enable: false, mode: [] },
+          onClick: { enable: true, mode: "push" },
           resize: { enable: true },
         },
         modes: {
