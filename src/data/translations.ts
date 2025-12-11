@@ -13,82 +13,82 @@ export const translations: Record<Language, PortfolioCopy> = {
     },
     hero: {
       eyebrow: "Junior Software Engineer",
-      title: "Delivering high-performance solutions focused on quality.",
+      title: "High-performance solutions focused on quality.",
       subtitle:
-        "Full Stack Developer specialized in JavaScript/TypeScript. I build scalable architectures, implement CI/CD pipelines, and optimize systems for performance and security.",
+        "Full Stack Developer (JS/TS). I build scalable architectures, robust CI/CD pipelines, and secure systems.",
       primaryCta: "View Projects",
       secondaryCta: "Let’s Talk",
-      trustedBy: "Trusted by innovative companies and academic communities",
+      trustedBy: "Trusted by innovative companies and academia",
       stats: [
         { label: "Years coding", value: "1.5+" },
         { label: "Projects delivered", value: "5+" },
         { label: "Community impact", value: "Unicoder" },
       ],
       techOrbit: {
-        instruction: "Drag to rotate or tap the arrows",
+        instruction: "Rotate the orbit to change the focus.",
         items: [
           {
-            id: TechIconId.React,
-            name: "React",
-            focus: "Frontend Engineering",
+            id: TechIconId.NestJS, 
+            name: "NestJS",
+            focus: "Backend Framework",
             summary:
-              "High-quality interfaces with reusable components and predictable state management using modern hooks.",
-            highlights: ["Design Patterns", "Hooks Architecture", "Reusable UI"],
+              "Efficient, scalable server-side applications with modular architecture.",
+            highlights: ["Modules", "Guards", "Dependency Injection"],
           },
           {
             id: TechIconId.Next,
             name: "Next.js",
             focus: "Fullstack React",
             summary:
-              "Development of web applications with focus on marketplace features and performance optimization.",
-            highlights: ["SSR", "API Routes", "Optimized DX"],
+              "Web apps focused on performance, SSR, and API integration.",
+            highlights: ["SSR", "API Routes", "Performance"],
           },
           {
             id: TechIconId.Node,
             name: "Node.js",
-            focus: "Backend & APIs",
+            focus: "Runtime",
             summary:
-              "Robust server-side logic with Nest.js, clean architecture, and efficient database modeling.",
-            highlights: ["NestJS", "Express", "RESTful APIs"],
+              "Robust server-side logic and event-driven architecture.",
+            highlights: ["Events", "Streams", "API"],
           },
           {
             id: TechIconId.Docker,
             name: "Docker",
             focus: "DevOps",
             summary:
-              "Containerization for consistent environments and implementation of CI/CD pipelines.",
-            highlights: ["Containers", "CI/CD", "GitHub Actions"],
+              "Containers, GitHub Actions, CI/CD pipelines, deploy, and auto-tests.",
+            highlights: ["CI/CD", "Actions", "Testing"],
           },
           {
             id: TechIconId.Aws,
             name: "AWS",
             focus: "Cloud & Scale",
             summary:
-              "Cloud infrastructure management using AWS ECS to optimize delivery flows.",
+              "Cloud infrastructure with ECS for optimized delivery flows.",
             highlights: ["ECS", "Cloud", "Deploy"],
           },
           {
-            id: TechIconId.Framer,
-            name: "Tailwind CSS", // Adapted text content to match stack
-            focus: "Styling",
+            id: TechIconId.Messaging, 
+            name: "Messaging",
+            focus: "Async Systems",
             summary:
-              "Rapid UI development with utility-first classes ensuring consistent design systems.",
-            highlights: ["Responsive", "Modern UI", "Efficiency"],
+              "Decoupled architecture using queues for high throughput.",
+            highlights: ["BullMQ", "Kafka", "Resilience"],
           },
           {
             id: TechIconId.TypeScript,
             name: "TypeScript",
             focus: "Type Safety",
             summary:
-              "Strict typing and contracts that ensure safer codebases and better developer experience.",
-            highlights: ["Generics", "Interfaces", "DX"],
+              "Strict typing and contracts for safer, maintainable codebases.",
+            highlights: ["Generics", "Interfaces", "Safety"],
           },
           {
             id: TechIconId.Postgres,
             name: "PostgreSQL",
-            focus: "Data & Persistence",
+            focus: "Data",
             summary:
-              "Relational modeling and database optimization for high-performance applications.",
+              "Relational modeling and optimization for high performance.",
             highlights: ["SQL", "Prisma", "Modeling"],
           },
         ],
@@ -97,159 +97,162 @@ export const translations: Record<Language, PortfolioCopy> = {
     about: {
       title: "About",
       subtitle:
-        "Junior Software Engineer with a passion for modern DevOps practices, SOLID principles, and Agile methodologies.",
+        "Junior Software Engineer passionate about DevOps, SOLID, and Agile.",
       timeline: [
         {
           year: "2025",
           role: "Junior Software Engineer",
           company: "NOCORP LTDA",
           description:
-            "Developing information systems and implementing complete CI/CD pipelines with GitHub Actions and AWS ECS. Optimized sales processing capacity by 4x.",
-          badges: ["Nest.js", "CI/CD", "AWS ECS"],
+            "System dev and CI/CD pipelines with GitHub Actions/AWS. Optimized sales processing by 4x.",
+          badges: ["Nest.js", "CI/CD", "AWS"],
         },
         {
           year: "2024",
           role: "Full Stack Trainee",
           company: "NOCORP LTDA",
           description:
-            "Collaborated on web apps using React, Next.js, and Node.js for national and international clients, focusing on marketplace solutions.",
-          badges: ["React", "TypeScript", "Marketplace"],
+            "Web apps with React/Node.js for global clients, focusing on marketplaces.",
+          badges: ["React", "TS", "Marketplace"],
         },
         {
           year: "2023",
           role: "B.S. Information Systems",
           company: "Unimontes",
           description:
-            "Academic representative in ICPC Programming Contests and founder of the Unicoder event.",
-          badges: ["Algorithms", "Leadership", "Event Ops"],
+            "ICPC competitor and founder of the Unicoder event.",
+          badges: ["Algorithms", "Leadership", "Events"],
         },
       ],
       caption:
-        "Focused on delivering real value through efficient code, system modeling, and continuous improvement.",
+        "Delivering value through efficient code and continuous improvement.",
     },
     skills: {
       title: "Problems I Solve",
       subtitle:
-        "I combine technical expertise in JS/TS with a product mindset to build secure and scalable software.",
+        "Engineering and product mindset for secure, scalable software.",
       cards: [
         {
           title: "Backend & Architecture",
           description:
-            "I design RESTful APIs, model databases (SQL/NoSQL), and build scalable services using Node.js and Nest.js.",
+            "RESTful APIs, database modeling, and scalable services with NestJS/Node.js.",
           icon: SkillIconId.Server,
         },
         {
-          title: "Frontend & Experience",
+          title: "AI Solutions",
           description:
-            "Responsive and performant interfaces built with React, Next.js, and Tailwind, focusing on user experience.",
+            "Integration of AI models for intelligent functionalities and automation. MCP consumption and creation of powerful agents.",
           icon: SkillIconId.Sparkles,
         },
         {
           title: "DevOps & Reliability",
           description:
-            "Implementation of CI/CD pipelines, Docker containerization, and cloud deployment (AWS) for reliable delivery.",
+            "CI/CD pipelines, Docker, and AWS cloud deployment for reliable delivery.",
           icon: SkillIconId.Activity,
         },
       ],
     },
     projects: {
       title: "Projects",
-      subtitle: "A selection of professional work and community initiatives.",
+      subtitle: "Selected technical solutions and commercial apps.",
       modal: {
-        what: "Project Overview",
-        problem: "Problem Space",
-        stack: "Tech Stack",
-        metrics: "Impact Snapshot",
-        repoCta: "Access repository",
-        liveCta: "Launch product",
+        what: "Overview",
+        problem: "Problem",
+        stack: "Stack",
+        metrics: "Impact",
+        repoCta: "Code",
+        liveCta: "View",
       },
       cards: [
         {
-          slug: "unicoder",
-          title: "Unicoder",
+          slug: "falacomigo",
+          title: "FalaComigo: AI Chat",
           excerpt:
-            "Founder of Unicoder - Developer Week in Montes Claros, fostering the local tech community.",
-          cover: "/projects/unicoder.svg",
+            "Real-time language learning platform with Groq AI translation.",
+          cover: "/falacomigo.png",
           problem:
-            "The academic community needed a centralized event to connect students with modern development practices.",
+            "Learners face anxiety and barriers practicing with native speakers.",
           overview:
-            "Organized the event and developed digital assets to manage the developer week at Unimontes.",
+            "NestJS/Next.js chat using BullMQ queues to handle AI inference asynchronously without blocking.",
           impact: [
-            "Founded a key regional tech event.",
-            "Connected students and professionals.",
+            "Inference <200ms.",
+            "Scalable queues.",
+            "Seamless chat.",
           ],
-          tech: ["Leadership", "Community", "Event Management"],
-          github: {
-            stars: "N/A",
-            forks: "N/A",
-            language: "N/A",
-          },
-          links: {
-            live: "https://unicoder.app", // Placeholder based on context
-            repo: "https://github.com/marcelomatheus",
-          },
-        },
-        {
-          slug: "crm-api",
-          title: "CRM & Messaging System",
-          excerpt:
-            "A messaging system implementation that increased batch sales processing capacity by 4x.",
-          cover: "/projects/crm.svg",
-          problem:
-            "The legacy process for batch sales was slow and limited the company's operational throughput.",
-          overview:
-            "Implemented a robust messaging system within a CRM, optimizing database interactions and processing logic.",
-          impact: [
-            "Increased processing capacity by 4x.",
-            "Optimized delivery flow for sales.",
-          ],
-          tech: ["NestJS", "Node.js", "Messaging", "SQL"],
+          tech: ["NestJS", "BullMQ", "Groq AI", "Socket.io", "MongoDB"],
           github: {
             stars: "N/A",
             forks: "N/A",
             language: "TypeScript",
           },
           links: {
-            live: "#",
-            repo: "#",
+            live: "https://github.com/marcelomatheus/falacomigo-chat-server",
+            repo: "https://github.com/marcelomatheus/falacomigo-chat-server",
           },
         },
         {
-          slug: "student-ms",
-          title: "Marketplace Platforms",
+          slug: "dezapeguei",
+          title: "Dezapeguei Marketplace",
           excerpt:
-            "Development of web applications and RESTful APIs for national and international marketplace clients.",
-          cover: "/projects/student.svg",
+            "P2P marketplace app inspired by OLX (Flutter/NestJS).",
+          cover: "/dezapeguei.png",
           problem:
-            "Clients required scalable platforms with continuous feature delivery and high availability.",
+            "Users needed a secure, mobile-first trading environment.",
           overview:
-            "Collaborated on full-stack development using React, Next.js, and Node.js, implementing new features and bug fixes.",
+            "Complete marketplace with Supabase auth and modular Flutter architecture. Includes real-time chat.",
           impact: [
-            "Continuous improvement of products.",
-            "Delivery of high-performance web apps.",
+            "Native performance.",
+            "Secure Auth.",
+            "Instant negotiation.",
           ],
-          tech: ["React", "Next.js", "Node.js", "TypeScript"],
+          tech: ["Flutter", "NestJS", "Supabase", "WebSockets"],
+          github: {
+            stars: "N/A",
+            forks: "N/A",
+            language: "Dart/TS",
+          },
+          links: {
+            live: "https://github.com/marcelomatheus/dezapeguei-server",
+            repo: "https://github.com/marcelomatheus/dezapeguei-server",
+          },
+        },
+        {
+          slug: "crm-system",
+          title: "SME CRM System",
+          excerpt:
+            "Clean-architecture CRM for micro-businesses.",
+          cover: "/crm.png",
+          problem:
+            "Inefficiency and context loss due to spreadsheet management.",
+          overview:
+            "Node.js backend with Zod validation, Prisma ORM, and Swagger documentation.",
+          impact: [
+            "No manual errors.",
+            "Centralized data.",
+            "Automated tracking.",
+          ],
+          tech: ["Node.js", "Zod", "Prisma", "Clean Arch"],
           github: {
             stars: "N/A",
             forks: "N/A",
             language: "TypeScript",
           },
           links: {
-            live: "#",
-            repo: "#",
+            live: "https://github.com/marcelomatheus/crm-micro-business-server",
+            repo: "https://github.com/marcelomatheus/crm-micro-business-server",
           },
         },
       ],
     },
     common: {
       close: "Close",
-      comingSoon: "Coming soon",
+      comingSoon: "Soon",
     },
     footer: {
       role: "Junior Software Engineer",
       description:
-        "Building high-performance solutions with a focus on quality, security, and user experience.",
-      location: "Montes Claros, MG · Remote-friendly",
+        "High-performance solutions with quality and security.",
+      location: "Montes Claros, MG",
       phoneLabel: "00",
       phoneHref: "00",
       navTitle: "Navigation",
@@ -261,15 +264,13 @@ export const translations: Record<Language, PortfolioCopy> = {
       ],
       resourcesTitle: "Resources",
       resourceLinks: [
-        { label: "Resume", href: "https://drive.google.com", icon: FooterIconId.External },
-        { label: "LinkedIn", href: "https://www.linkedin.com/in/marcelooliveiradev/", icon: FooterIconId.External },
-        { label: "GitHub", href: "https://github.com/marcelomatheus", icon: FooterIconId.External },
-      ],
+        { label: "Medium", href: "https://medium.com/@marcelomatheusbr", icon: FooterIconId.External },
+       ],
       socialTitle: "Connect",
       socialLinks: [
         { label: "LinkedIn", href: "https://www.linkedin.com/in/marcelooliveiradev/", icon: FooterIconId.Linkedin },
         { label: "GitHub", href: "https://github.com/marcelomatheus", icon: FooterIconId.Github },
-        { label: "E-mail", href: "mailto:contact@marcelomatheus.tech", icon: FooterIconId.Mail }, 
+        { label: "E-mail", href: "mailto:contact@marcelomatheus.tech", icon: FooterIconId.Mail },
       ],
       note: "Marcelo Matheus Silva de Oliveira. All rights reserved.",
     },
@@ -284,82 +285,82 @@ export const translations: Record<Language, PortfolioCopy> = {
     },
     hero: {
       eyebrow: "Engenheiro de Software Jr",
-      title: "Entrego soluções de alto desempenho com foco em qualidade.",
+      title: "Soluções de alto desempenho e qualidade.",
       subtitle:
-        "Desenvolvedor Full Stack especializado em JavaScript e TypeScript. Construo arquiteturas escaláveis, pipelines de CI/CD e aplico práticas modernas de Engenharia de Software.",
+        "Dev Full Stack (JS/TS). Construo arquiteturas escaláveis, pipelines CI/CD e sistemas seguros.",
       primaryCta: "Ver projetos",
       secondaryCta: "Conversar",
-      trustedBy: "Experiência em projetos nacionais e internacionais",
+      trustedBy: "Projetos nacionais e internacionais",
       stats: [
         { label: "Anos programando", value: "1.5+" },
         { label: "Projetos entregues", value: "5+" },
         { label: "Impacto comunidade", value: "Unicoder" },
       ],
       techOrbit: {
-        instruction: "Arraste ou use as setas para girar",
+        instruction: "Gire a órbita para mudar o foco.",
         items: [
           {
-            id: TechIconId.React,
-            name: "React",
-            focus: "Frontend",
+            id: TechIconId.NestJS, 
+            name: "NestJS",
+            focus: "Framework Backend",
             summary:
-              "Interfaces de alta qualidade com componentes reutilizáveis e gerenciamento de estado previsível.",
-            highlights: ["Design Patterns", "Hooks", "UI Reutilizável"],
+              "Aplicações server-side eficientes e escaláveis com arquitetura modular.",
+            highlights: ["Módulos", "Guards", "Injeção de Dep."],
           },
           {
             id: TechIconId.Next,
             name: "Next.js",
             focus: "Fullstack React",
             summary:
-              "Desenvolvimento de aplicações web focadas em marketplace, performance e integração de APIs.",
+              "Apps web focados em performance, SSR e integração de APIs.",
             highlights: ["SSR", "API Routes", "DX"],
           },
           {
             id: TechIconId.Node,
             name: "Node.js",
-            focus: "Back-end & APIs",
+            focus: "Runtime",
             summary:
-              "Serviços robustos com Nest.js, arquitetura limpa e modelagem de banco de dados eficiente.",
-            highlights: ["NestJS", "Express", "RESTful APIs"],
+              "Lógica server-side robusta e arquitetura orientada a eventos.",
+            highlights: ["Eventos", "Streams", "API"],
           },
           {
             id: TechIconId.Docker,
             name: "Docker",
             focus: "DevOps",
             summary:
-              "Containerização para ambientes consistentes e implementação de pipelines de CI/CD.",
-            highlights: ["Containers", "CI/CD", "Github Actions"],
+              "Containers, GitHub Actions, pipelines de CI/CD, deploy e testes automatizados.",
+            highlights: ["CI/CD", "Actions", "Testes"],
           },
           {
             id: TechIconId.Aws,
             name: "AWS",
             focus: "Infra & Escala",
             summary:
-              "Gerenciamento de infraestrutura em nuvem utilizando AWS ECS para otimizar fluxos de entrega.",
+              "Infraestrutura cloud com ECS para fluxos de entrega otimizados.",
             highlights: ["ECS", "Cloud", "Deploy"],
           },
           {
-            id: TechIconId.Framer,
-            name: "Tailwind CSS", // Adapted text
-            focus: "Estilização",
+            id: TechIconId.Messaging, 
+            name: "Mensageria",
+            focus: "Sistemas Assíncronos",
             summary:
-              "Desenvolvimento ágil de interfaces responsivas e sistemas de design consistentes.",
-            highlights: ["Responsivo", "UI Moderna", "Eficiência"],
+              "Arquiteturas desacopladas usando filas para alto tráfego.",
+            highlights: ["BullMQ", "Kafka", "Resiliência"],
           },
           {
             id: TechIconId.TypeScript,
             name: "TypeScript",
-            focus: "Tipagem & Robustez",
+            focus: "Tipagem",
             summary:
-              "Código seguro com tipagem estrita e contratos claros que garantem manutenibilidade.",
+              "Código seguro com contratos claros para maior manutenibilidade.",
             highlights: ["Generics", "Interfaces", "DX"],
           },
           {
             id: TechIconId.Postgres,
             name: "PostgreSQL",
-            focus: "Dados & Persistência",
+            focus: "Dados",
             summary:
-              "Modelagem relacional confiável e estratégias de indexação para aplicações de alto desempenho.",
+              "Modelagem relacional confiável e otimização para performance.",
             highlights: ["SQL", "Prisma", "Modelagem"],
           },
         ],
@@ -368,140 +369,149 @@ export const translations: Record<Language, PortfolioCopy> = {
     about: {
       title: "Sobre",
       subtitle:
-        "Engenheiro de Software Jr interessado em DevOps, SOLID e Agile, focado em alinhar soluções aos objetivos do cliente.",
+        "Engenheiro de Software Jr focado em DevOps, SOLID e Agile.",
       timeline: [
         {
           year: "2025",
           role: "Engenheiro de Software Jr",
           company: "NOCORP LTDA",
           description:
-            "Desenvolvimento de sistemas e implementação de pipelines CI/CD com GitHub Actions e AWS ECS. Aumentei em 4x a capacidade de processamento de vendas.",
-          badges: ["Nest.js", "CI/CD", "AWS ECS"],
+            "Sistemas e pipelines CI/CD com GitHub Actions/AWS. Aumentei processamento de vendas em 4x.",
+          badges: ["Nest.js", "CI/CD", "AWS"],
         },
         {
           year: "2024",
           role: "Desenvolvedor Trainee",
           company: "NOCORP LTDA",
           description:
-            "Colaboração em apps web com React e Node.js para clientes nacionais e internacionais, com foco em marketplace e resolução de problemas.",
-          badges: ["React", "TypeScript", "Marketplace"],
+            "Apps web React/Node.js para clientes globais, com foco em marketplace.",
+          badges: ["React", "TS", "Marketplace"],
         },
         {
           year: "2023",
           role: "Bacharelando em Sistemas",
           company: "Unimontes",
           description:
-            "Representante na Maratona de Programação ICPC e fundador do evento Unicoder.",
+            "Maratona ICPC e fundador do evento Unicoder.",
           badges: ["Algoritmos", "Liderança", "Eventos"],
         },
       ],
       caption:
-        "Apaixonado por entregar valor real, eficiência e boas práticas de desenvolvimento.",
+        "Entregando valor real com código eficiente e melhoria contínua.",
     },
     skills: {
       title: "Problemas que Resolvo",
       subtitle:
-        "Combino engenharia de software e visão de produto para construir sistemas seguros, rápidos e escaláveis.",
+        "Engenharia e visão de produto para software seguro e escalável.",
       cards: [
         {
           title: "Back-end & Arquitetura",
           description:
-            "Projeto APIs RESTful com redução de tempo de resposta, modelagem de dados e arquiteturas em Node.js/Nest.js.",
+            "APIs RESTful, modelagem de dados e serviços escaláveis com NestJS/Node.js.",
           icon: SkillIconId.Server,
         },
         {
-          title: "Frontend & Experiência",
+          title: "Soluções de IA",
           description:
-            "Interfaces responsivas e de alto desempenho construídas com React, Next.js e Tailwind, focadas no usuário.",
+            "Integração de modelos de IA para funcionalidades inteligentes e automação. Consumo de MCP e criação de agentes poderosos.",
           icon: SkillIconId.Sparkles,
         },
         {
           title: "DevOps & Confiabilidade",
           description:
-            "Implementação de pipelines CI/CD, Docker e orquestração em nuvem (AWS) para entregas contínuas e seguras.",
+            "Pipelines CI/CD, Docker e deploy AWS para entregas seguras.",
           icon: SkillIconId.Activity,
         },
       ],
     },
     projects: {
       title: "Projetos",
-      subtitle: "Meus trabalhos profissionais e iniciativas na comunidade.",
+      subtitle: "Soluções técnicas complexas e aplicações comerciais.",
       modal: {
         what: "Visão Geral",
         problem: "Problema",
         stack: "Stack",
         metrics: "Impacto",
-        repoCta: "Abrir repositório",
-        liveCta: "Ver produto",
+        repoCta: "Código",
+        liveCta: "Ver",
       },
       cards: [
         {
-          slug: "unicoder",
-          title: "Unicoder",
+          slug: "falacomigo",
+          title: "FalaComigo: Chat IA",
           excerpt:
-            "Fundador do Unicoder - Semana do Desenvolvedor em Montes Claros, fomentando a tecnologia local.",
-          cover: "/projects/unicoder.svg",
+            "Plataforma de idiomas com chat real-time e tradução via Groq IA.",
+          cover: "/falacomigo.png",
           problem:
-            "A comunidade acadêmica precisava de um evento centralizado para conectar alunos e mercado.",
+            "Barreiras e ansiedade ao praticar idiomas com nativos.",
           overview:
-            "Organizei o evento e desenvolvi ativos digitais para gerenciar a semana do desenvolvedor na Unimontes.",
+            "Chat NestJS/Next.js com filas BullMQ para inferência IA assíncrona sem travar o servidor.",
           impact: [
-            "Fundação de evento regional.",
-            "Conexão entre alunos e mercado.",
+            "Inferência <200ms.",
+            "Filas resilientes.",
+            "Chat fluído.",
           ],
-          tech: ["Liderança", "Comunidade", "Gestão de Eventos"],
-          github: {
-            stars: "N/A",
-            forks: "N/A",
-            language: "N/A",
-          },
-          links: {
-            live: "https://unicoder.app",
-            repo: "https://github.com/marcelomatheus",
-          },
-        },
-        {
-          slug: "crm-api",
-          title: "CRM & Mensageria",
-          excerpt:
-            "Implementação de sistema de mensageria que aumentou em 4x a capacidade de processamento.",
-          cover: "/projects/crm.svg",
-          problem:
-            "O processamento de vendas em lote era um gargalo operacional para o cliente.",
-          overview:
-            "Implementei um sistema robusto de mensageria dentro de um CRM, otimizando a interação com o banco de dados.",
-          impact: ["Aumento de 4x no processamento", "Fluxo de entrega otimizado"],
-          tech: ["NestJS", "Node.js", "Mensageria", "SQL"],
+          tech: ["NestJS", "BullMQ", "Groq AI", "Socket.io", "MongoDB"],
           github: {
             stars: "N/A",
             forks: "N/A",
             language: "TypeScript",
           },
           links: {
-            live: "",
-            repo: "",
+            live: "https://github.com/marcelomatheus/falacomigo-chat-server",
+            repo: "https://github.com/marcelomatheus/falacomigo-chat-server",
           },
         },
         {
-          slug: "student-ms",
-          title: "Plataformas Marketplace",
+          slug: "dezapeguei",
+          title: "Dezapeguei Marketplace",
           excerpt:
-            "Desenvolvimento e evolução de sistemas web e APIs para clientes de marketplace.",
-          cover: "/projects/student.svg",
+            "Marketplace P2P estilo OLX (Flutter/NestJS).",
+          cover: "/dezapeguei.png",
           problem:
-            "Clientes necessitavam de plataformas escaláveis com entrega contínua de novas funcionalidades.",
+            "Necessidade de ambiente seguro e mobile para negociações.",
           overview:
-            "Atuei no desenvolvimento full stack com React, Next.js e Node.js, garantindo alinhamento aos objetivos do cliente.",
-          impact: ["Melhoria contínua de produtos", "Sistemas de alta performance"],
-          tech: ["React", "Next.js", "Node.js", "TypeScript"],
+            "Marketplace completo com Auth Supabase e Flutter modular. Inclui chat real-time.",
+          impact: [
+            "Performance nativa.",
+            "Auth Segura.",
+            "Negociação rápida.",
+          ],
+          tech: ["Flutter", "NestJS", "Supabase", "WebSockets"],
+          github: {
+            stars: "N/A",
+            forks: "N/A",
+            language: "Dart/TS",
+          },
+          links: {
+            live: "https://github.com/marcelomatheus/dezapeguei-server",
+            repo: "https://github.com/marcelomatheus/dezapeguei-server",
+          },
+        },
+        {
+          slug: "crm-system",
+          title: "CRM Pequenos Negócios",
+          excerpt:
+            "CRM Clean Architecture para microempresas.",
+          cover: "/crm.png",
+          problem:
+            "Perda de eficiência ao usar planilhas descentralizadas.",
+          overview:
+            "Backend Node.js com validação Zod, Prisma ORM e documentação Swagger.",
+          impact: [
+            "Zero erros manuais.",
+            "Dados centralizados.",
+            "Rastreamento auto.",
+          ],
+          tech: ["Node.js", "Zod", "Prisma", "Clean Arch"],
           github: {
             stars: "N/A",
             forks: "N/A",
             language: "TypeScript",
           },
           links: {
-            live: "",
-            repo: "",
+            live: "https://github.com/marcelomatheus/crm-micro-business-server",
+            repo: "https://github.com/marcelomatheus/crm-micro-business-server",
           },
         },
       ],
@@ -513,8 +523,8 @@ export const translations: Record<Language, PortfolioCopy> = {
     footer: {
       role: "Engenheiro de Software Jr",
       description:
-        "Construindo experiências digitais que combinam desempenho, qualidade e foco no usuário.",
-      location: "Montes Claros, MG · Remote-friendly",
+        "Soluções de alto desempenho com qualidade e segurança.",
+      location: "Montes Claros, MG",
       phoneLabel: "00",
       phoneHref: "00",
       navTitle: "Navegação",
@@ -526,10 +536,8 @@ export const translations: Record<Language, PortfolioCopy> = {
       ],
       resourcesTitle: "Recursos",
       resourceLinks: [
-        { label: "Currículo", href: "https://drive.google.com", icon: FooterIconId.External },
-        { label: "LinkedIn", href: "https://www.linkedin.com/in/marcelooliveiradev/", icon: FooterIconId.External },
-        { label: "GitHub", href: "https://github.com/marcelomatheus", icon: FooterIconId.External },
-      ],
+        { label: "Medium", href: "https://medium.com/@marcelomatheusbr", icon: FooterIconId.External },
+        ],
       socialTitle: "Conecte-se",
       socialLinks: [
         { label: "LinkedIn", href: "https://www.linkedin.com/in/marcelooliveiradev/", icon: FooterIconId.Linkedin },

@@ -1,14 +1,14 @@
 export type Language = "en" | "pt";
 
 export enum TechIconId {
-	React = "react",
 	Next = "next",
 	Node = "node",
 	Docker = "docker",
 	Aws = "aws",
-	Framer = "framer",
 	Postgres = "postgres",
 	TypeScript = "typescript",
+	NestJS = "nestjs",
+	Messaging = "messaging",
 }
 
 export enum SkillIconId {
