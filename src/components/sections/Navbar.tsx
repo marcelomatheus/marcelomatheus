@@ -23,7 +23,7 @@ export function Navbar() {
   const closeMenu = () => setIsOpen(false);
 
   return (
-    <header className="fixed inset-x-0 z-40">
+    <header className="fixed inset-x-0 z-50 px-4">
       <div className="absolute inset-0 h-full bg-gradient-to-b from-black/40 to-transparent" aria-hidden />
       <nav className="mx-auto my-10 flex max-w-6xl items-center justify-between rounded-full border border-white/10 bg-black/30 px-5 py-3 backdrop-blur-xl">
         <Link href="#hero" className="flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.3em] text-white">
@@ -70,8 +70,15 @@ export function Navbar() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 z-30 bg-black/80 backdrop-blur-xl md:hidden"
+            className="fixed inset-0 z-40 bg-black/80 backdrop-blur-xl md:hidden"
           >
+            <button
+              onClick={closeMenu}
+              aria-label="Fechar menu"
+              className="absolute right-6 top-6 p-3 text-white transition "
+            >
+              <X className="h-6 w-6" />
+            </button>
             <motion.div
               initial={{ y: 30, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
