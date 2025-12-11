@@ -1,23 +1,25 @@
 import type { ComponentType } from "react";
 import {
-  SiAmazon,
   SiDocker,
-  SiFramer,
+  SiNestjs,
   SiNextdotjs,
   SiNodedotjs,
   SiPostgresql,
-  SiReact,
   SiTypescript,
 } from "react-icons/si";
 import type { TechIconId } from "@/data/interfaces/translations";
+import { TbBrandStackshare } from "react-icons/tb";
+
+import { FaAws } from "react-icons/fa";
 
 export const TECH_ICON_MAP: Record<TechIconId, ComponentType<{ className?: string }>> = {
-  react: SiReact,
+ 
+  nestjs: SiNestjs,
+  messaging: TbBrandStackshare,
   next: SiNextdotjs,
   node: SiNodedotjs,
   docker: SiDocker,
-  aws: SiAmazon,
-  framer: SiFramer,
+  aws: FaAws,
   postgres: SiPostgresql,
   typescript: SiTypescript,
 };
