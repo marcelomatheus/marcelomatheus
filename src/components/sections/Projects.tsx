@@ -30,14 +30,14 @@ export function Projects() {
       <div className="grid gap-6 md:grid-cols-3">
         {projects?.map((project, index) => (
           <RevealOnScroll key={project.slug} delay={index * 0.05}>
-            <GlassCard className="flex h-full flex-col border-white/10">
+            <GlassCard className="flex h-full flex-col">
               <div className="relative h-48 w-full overflow-hidden rounded-xl">
                 <Image src={project.cover} alt={project.title} fill sizes="(max-width:768px) 100vw, 33vw" className="object-cover" />
-                <div className="absolute inset-0 bg-gradient-to-b from-black/0 to-black/70" />
+                <div className="absolute inset-0 bg-gradient-to-b from-black/0 via-black/10 to-black/75" />
               </div>
               <div className="mt-4 flex-1">
                 <h3 className="text-2xl font-semibold text-white">{project.title}</h3>
-                <p className="mt-2 text-sm text-muted">{project.excerpt}</p>
+                <p className="mt-2 text-sm leading-7 text-muted">{project.excerpt}</p>
               </div>
               <div className="mt-4 flex flex-wrap gap-2">
                 {project.tech.slice(0, 3).map((tech) => (

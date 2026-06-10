@@ -9,27 +9,27 @@ import type { FooterCopy } from "@/data/interfaces/translations";
 export function Footer() {
   const { t } = useLanguage();
   const footer = t<FooterCopy>("footer");
-  const year = new Date().getFullYear();
+  const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="relative mt-24 border-t border-white/10 bg-gradient-to-b from-background/10 via-background/40 to-background/80">
+    <footer className="relative mt-24 border-t border-white/8 bg-gradient-to-b from-black/10 via-black/40 to-black/80">
       <div
-        className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_10%_20%,rgba(0,216,255,0.08),transparent_35%),radial-gradient(circle_at_80%_0%,rgba(255,255,255,0.06),transparent_30%)]"
+        className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_10%_20%,rgba(255,125,58,0.08),transparent_35%),radial-gradient(circle_at_80%_0%,rgba(255,255,255,0.04),transparent_30%)]"
         aria-hidden
       />
       <div className="mx-auto grid max-w-6xl gap-10 px-6 py-14 lg:grid-cols-4">
         <div className="space-y-4">
-          <div className="inline-flex items-center gap-3 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm font-medium text-white/90 shadow-glow">
-            <Send className="h-4 w-4 text-accent" aria-hidden />
+          <div className="inline-flex items-center gap-3 rounded-full border border-white/10 bg-surface px-4 py-2 text-sm font-medium text-white/90 shadow-glow">
+            <Send className="h-4 w-4 text-primary" aria-hidden />
             <span>{footer.role}</span>
           </div>
           <p className="text-sm text-muted">{footer.description}</p>
           <div className="flex items-center gap-2 text-sm text-white/80">
-            <MapPin className="h-4 w-4 text-accent" aria-hidden />
+            <MapPin className="h-4 w-4 text-primary" aria-hidden />
             <span>{footer.location}</span>
           </div>
           <div className="flex items-center gap-2 text-sm text-white/80">
-            <Phone className="h-4 w-4 text-accent" aria-hidden />
+            <Phone className="h-4 w-4 text-primary" aria-hidden />
             <a className="hover:text-white" href={footer.phoneHref}>
               {footer.phoneLabel}
             </a>
@@ -41,7 +41,7 @@ export function Footer() {
           <div className="flex flex-col gap-3 text-sm text-white/80">
             {footer.navLinks.map((link) => (
               <Link key={link.label} href={link.href} className="flex items-center gap-2 hover:text-white">
-                <span className="h-px w-6 bg-gradient-to-r from-accent to-transparent" aria-hidden />
+                <span className="h-px w-6 bg-gradient-to-r from-primary to-transparent" aria-hidden />
                 {link.label}
               </Link>
             ))}
@@ -61,7 +61,7 @@ export function Footer() {
                 rel="noreferrer"
                 className="flex items-center gap-2 hover:text-white"
               >
-                {Icon ? <Icon className="h-4 w-4 text-accent" aria-hidden /> : null}
+                {Icon ? <Icon className="h-4 w-4 text-primary" aria-hidden /> : null}
                 <span>{link.label}</span>
               </a>
               );
@@ -80,9 +80,9 @@ export function Footer() {
                   href={link.href}
                   target="_blank"
                   rel="noreferrer"
-                  className="flex items-center gap-3 rounded-full border border-white/10 bg-white/5 px-4 py-2 transition hover:border-accent/60 hover:bg-white/10 hover:text-white"
+                  className="flex items-center gap-3 rounded-full border border-white/10 bg-surface px-4 py-2 transition hover:border-primary/60 hover:bg-white/[0.08] hover:text-white"
                 >
-                  {Icon ? <Icon className="h-4 w-4 text-accent" aria-hidden /> : null}
+                  {Icon ? <Icon className="h-4 w-4 text-primary" aria-hidden /> : null}
                   <span>{link.label}</span>
                 </a>
               );
@@ -91,9 +91,9 @@ export function Footer() {
         </div>
       </div>
 
-      <div className="border-t border-white/10 bg-black/40 px-6 py-6 text-sm text-muted">
+      <div className="border-t border-white/8 bg-black/40 px-6 py-6 text-sm text-muted">
         <div className="mx-auto flex max-w-6xl gap-3 sm:flex-row sm:items-center sm:justify-between">
-          <p>© {year} {footer.note}</p>
+          <p>© {currentYear} {footer.note}</p>
         </div>
       </div>
     </footer>

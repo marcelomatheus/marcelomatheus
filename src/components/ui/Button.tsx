@@ -9,9 +9,9 @@ const baseStyles =
 
 const variantStyles: Record<ButtonVariant, string> = {
   primary:
-    "bg-gradient-to-r from-primary-400 via-primary-500 to-accent text-white shadow-[0_0_10px_rgba(122,91,255,0.6)]",
+    "border border-primary/60 bg-primary text-black shadow-[0_12px_28px_rgba(255,125,58,0.22)] hover:bg-primary-400",
   outline:
-    "border border-white/20 bg-white/5 text-white hover:border-accent/70 hover:text-accent",
+    "border border-white/12 bg-surface text-white hover:border-primary/60 hover:text-primary",
   ghost: "text-muted hover:text-white",
 };
 

@@ -4,14 +4,14 @@ import type { BadgeProps } from "../interfaces/ui";
 export function Badge({ className, children, variant = "default", ...props }: BadgeProps) {
   const styles =
     variant === "outline"
-      ? "border border-white/20 bg-white/5"
-      : "bg-gradient-to-r from-white/10 via-white/5 to-transparent";
+      ? "border border-white/12 bg-black/20"
+      : "border border-white/8 bg-white/[0.04]";
 
   return (
     <span
       className={cn(
-        "inline-flex items-center rounded-full px-3 py-1 text-xs font-medium uppercase tracking-wide text-muted",
-        "backdrop-blur-md",
+        "inline-flex items-center rounded-full px-3 py-1 text-xs font-medium uppercase tracking-[0.18em] text-white/72",
+        "backdrop-blur-sm",
         styles,
         className,
       )}

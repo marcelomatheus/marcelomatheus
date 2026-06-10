@@ -5,9 +5,9 @@ export function GlassCard({ className, ...props }: GlassCardProps) {
   return (
     <div
       className={cn(
-        "relative overflow-hidden rounded-2xl border border-white/10 bg-white/5 p-6",
-        "backdrop-blur-2xl shadow-inner-card",
-        "before:pointer-events-none before:absolute before:-top-16 before:right-0 before:h-32 before:w-32 before:bg-card-glow before:opacity-80 before:content-['']",
+        "noise-card relative overflow-hidden rounded-[2rem] border border-white/8 bg-surface p-6",
+        "shadow-panel backdrop-blur-sm",
+        "before:pointer-events-none before:absolute before:-right-10 before:top-0 before:h-32 before:w-32 before:bg-card-glow before:opacity-90 before:blur-2xl before:content-['']",
         className,
       )}
       {...props}

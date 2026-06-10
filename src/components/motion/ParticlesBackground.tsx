@@ -24,27 +24,27 @@ export function ParticlesBackground() {
       fpsLimit: 120,
       particles: {
         number: {
-          value: 200,
+          value: 140,
           density: { enable: true, width: 1200 },
         },
         color: {
-          value: ["#7dd3fc", "#f472b6", "#a5b4fc", "#67e8f9"],
+          value: ["#ffffff", "#d4d4d4", "#ff7d3a"],
         },
         opacity: {
-          value: 0.32,
+          value: 0.12,
           animation: {
             enable: true,
-            speed: 0.6,
-            minimumValue: 0.08,
+            speed: 0.3,
+            minimumValue: 0.02,
             sync: false,
           },
         },
         size: {
-          value: { min: 1, max: 3.4 },
+          value: { min: 1, max: 2.2 },
         },
         move: {
           enable: true,
-          speed: 0.45,
+          speed: 0.28,
           direction: "none",
           random: false,
           straight: false,
@@ -57,8 +57,8 @@ export function ParticlesBackground() {
         links: {
           enable: true,
           distance: 150,
-          color: "#8b5cf6",
-          opacity: 0.16,
+          color: "#ffffff",
+          opacity: 0.05,
           width: 1,
         },
       },
@@ -68,13 +68,13 @@ export function ParticlesBackground() {
           onHover: {
             enable: true,
             mode: "attract",
-            parallax: { enable: true, force: 60, smooth: 12 },
+            parallax: { enable: true, force: 36, smooth: 14 },
           },
           onClick: { enable: true, mode: "push" },
           resize: { enable: true },
         },
         modes: {
-          attract: { distance: 200, duration: 0.4, factor: 3 },
+          attract: { distance: 160, duration: 0.35, factor: 2 },
         },
       },
     }),

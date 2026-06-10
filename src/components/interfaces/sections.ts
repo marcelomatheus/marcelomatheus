@@ -1,7 +1,7 @@
-import type { ProjectCardContent, SkillIconId, TechOrbitCopy, TimelineItem } from "@/data/translations";
+import type { HeroCarouselCopy, ProjectCardContent, SkillIconId, TimelineItem } from "@/data/translations";
 
-export interface TechOrbitProps {
-  copy?: TechOrbitCopy;
+export interface HeroCarouselProps {
+  copy?: HeroCarouselCopy;
 }
 
 export interface ProjectModalProps {

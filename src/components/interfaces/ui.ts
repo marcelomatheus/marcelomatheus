@@ -13,10 +13,10 @@ export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   rightIcon?: ReactNode;
 }
 
-export interface GlassCardProps extends HTMLAttributes<HTMLDivElement> {}
+export type GlassCardProps = HTMLAttributes<HTMLDivElement>;
 
-export interface EyebrowProps extends HTMLAttributes<HTMLParagraphElement> {}
+export type EyebrowProps = HTMLAttributes<HTMLParagraphElement>;
 
-export interface GradientHeadingProps extends HTMLAttributes<HTMLHeadingElement> {}
+export type GradientHeadingProps = HTMLAttributes<HTMLHeadingElement>;
 
-export interface SectionParagraphProps extends HTMLAttributes<HTMLParagraphElement> {}
+export type SectionParagraphProps = HTMLAttributes<HTMLParagraphElement>;

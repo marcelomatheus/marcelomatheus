@@ -16,7 +16,7 @@ export function ProjectModal({ project, copy, onClose, commonClose }: ProjectMod
           onClick={onClose}
         >
           <motion.div
-            className="relative max-h-[90vh] w-full max-w-4xl overflow-y-auto rounded-3xl border border-white/15 bg-black/70 p-8 shadow-2xl"
+            className="noise-card relative max-h-[90vh] w-full max-w-4xl overflow-y-auto rounded-[2rem] border border-white/10 bg-[#111111]/95 p-8 shadow-2xl"
             initial={{ scale: 0.95, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             exit={{ scale: 0.95, opacity: 0 }}
@@ -58,7 +58,7 @@ export function ProjectModal({ project, copy, onClose, commonClose }: ProjectMod
                     ))}
                   </div>
                 </div>
-                <div className="rounded-2xl border border-white/10 bg-white/5 p-4">
+                <div className="rounded-2xl border border-white/10 bg-surface p-4">
                   <div className="flex items-center justify-between text-sm text-muted">
                     <span>GitHub</span>
                     <span className="flex items-center gap-2 text-white">

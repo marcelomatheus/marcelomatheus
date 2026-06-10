@@ -23,10 +23,10 @@ export function Skills() {
       <div className="grid gap-6 md:grid-cols-3">
         {cards?.map((card, index) => (
           <RevealOnScroll key={card.title} delay={index * 0.05}>
-            <GlassCard className="h-full border-white/10">
+            <GlassCard className="h-full">
               <SkillIcon name={card.icon} />
               <h3 className="mt-6 text-2xl font-semibold text-white">{card.title}</h3>
-              <p className="mt-3 text-sm text-muted">{card.description}</p>
+              <p className="mt-3 text-sm leading-7 text-muted">{card.description}</p>
             </GlassCard>
           </RevealOnScroll>
         ))}

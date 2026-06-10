@@ -24,14 +24,14 @@ export function Navbar() {
 
   return (
     <header className="fixed inset-x-0 z-50 px-4">
-      <div className="absolute inset-0 h-full bg-gradient-to-b from-black/40 to-transparent" aria-hidden />
-      <nav className="mx-auto my-10 flex max-w-6xl items-center justify-between rounded-full border border-white/10 bg-black/30 px-5 py-3 backdrop-blur-xl">
+      <div className="absolute inset-0 h-full bg-gradient-to-b from-black/55 to-transparent" aria-hidden />
+      <nav className="mx-auto my-6 flex max-w-6xl items-center justify-between rounded-full border border-white/8 bg-black/45 px-5 py-3 shadow-panel backdrop-blur-xl">
         <Link href="#hero" className="flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.3em] text-white">
          Marcelo Matheus
         </Link>
         <div className="hidden items-center gap-6 text-sm text-muted md:flex">
           {links.map((link) => (
-            <a key={link.href} href={link.href} className="transition hover:text-white">
+            <a key={link.href} href={link.href} className="transition hover:text-primary">
               {link.label}
             </a>
           ))}
@@ -40,17 +40,17 @@ export function Navbar() {
           <button
             onClick={toggleLanguage}
             className={cn(
-              "rounded-full border border-white/20 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-muted",
-              "transition hover:border-accent/80 hover:text-white flex items-center gap-2",
+              "rounded-full border border-white/12 bg-surface px-3 py-2 text-xs font-semibold uppercase tracking-wider text-muted",
+              "transition hover:border-primary/80 hover:text-white flex items-center gap-2",
             )}
             aria-label="Toggle language"
 
-          >{language === "en" ? <LiaFlagUsaSolid size={19} /> : <GiBrazilFlag size={19}/>}
-            {language.toUpperCase()}
+          >{language === "pt" ? <LiaFlagUsaSolid size={19} /> : <GiBrazilFlag size={19}/>}
+          {language === "pt" ? "EN" : "PT"}
           </button>
           <Button
             variant="outline"
-            className="text-xs"
+            className="h-10 text-xs"
             onClick={() => document.getElementById("projects")?.scrollIntoView({ behavior: "smooth" })}
           >
             {t<string>("hero.primaryCta")}
@@ -90,13 +90,13 @@ export function Navbar() {
                   key={link.href}
                   href={link.href}
                   onClick={closeMenu}
-                  className="text-lg font-semibold text-white"
+                  className="text-lg font-semibold text-white transition hover:text-primary"
                 >
                   {link.label}
                 </a>
               ))}
               <Button onClick={toggleLanguage} variant="outline">
-                {language === "en" ? "Switch to PT" : "Switch to EN"}
+                {language === "pt" ?  "Mudar para EN" : "Switch to PT"}
               </Button>
               <Button
                 onClick={() => {
