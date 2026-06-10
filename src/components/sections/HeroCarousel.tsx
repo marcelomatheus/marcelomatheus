@@ -64,14 +64,11 @@ function CarouselCard({
       )}
       initial={false}
       animate={{
-        x:
-          position === 0
-            ? "-50%"
-            : `calc(-50% + ${position * (position > 0 ? 44 : 44)}%)`,
-        y: "-50%",
-        scale: isActive ? 1 : absPosition === 1 ? 0.86 : 0.72,
-        rotate: isActive ? 0 : position * 11,
-        opacity: absPosition > 2 ? 0 : isActive ? 1 : absPosition === 1 ? 0.55 : 0.18,
+        x: `calc(-50% + ${position * 90}%)`,
+        y: `calc(-50% + ${absPosition * 12}%)`, 
+        scale: isActive ? 1 : absPosition === 1 ? 0.85 : 0.7,
+        rotate: position * 14, // Aumenta o grau do leque
+        opacity: absPosition > 2 ? 0 : isActive ? 1 : absPosition === 1 ? 0.8 : 0.4, 
         zIndex: 30 - absPosition,
       }}
       transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
@@ -146,13 +143,14 @@ export function HeroCarousel({ copy }: HeroCarouselProps) {
 
   return (
     <div
-      className="relative mx-auto w-full max-w-[40rem]"
+      className="relative mx-auto w-full max-w-[70rem] px-4" // Aumentado o max-w para suportar o leque de cartões
       onMouseEnter={() => setIsPaused(true)}
       onMouseLeave={() => setIsPaused(false)}
     >
       <div className="absolute inset-x-[14%] top-[10%] h-32 rounded-full bg-primary/15 blur-3xl" aria-hidden />
+      
       <motion.div
-        className="relative h-[30rem] cursor-grab overflow-hidden active:cursor-grabbing sm:h-[34rem] lg:h-[37rem]"
+        className="relative h-[30rem] cursor-grab overflow-visible active:cursor-grabbing sm:h-[34rem] lg:h-[37rem]" // Transformado para overflow-visible
         drag="x"
         dragConstraints={{ left: 0, right: 0 }}
         dragElastic={0.08}
