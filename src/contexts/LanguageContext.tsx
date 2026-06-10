@@ -21,7 +21,7 @@ const resolvePath = (tree: Record<string, unknown>, path: string): unknown => {
 };
 
 export function LanguageProvider({ children }: LanguageProviderProps) {
-  const [language, setLanguage] = useState<Language>("en");
+  const [language, setLanguage] = useState<Language>("pt");
 
   const dictionary = useMemo<PortfolioCopy>(() => translations[language], [language]);
 
@@ -32,7 +32,7 @@ export function LanguageProvider({ children }: LanguageProviderProps) {
   );
 
   const toggleLanguage = useCallback(() => {
-    setLanguage((prev: Language) => (prev === "en" ? "pt" : "en"));
+    setLanguage((prev: Language) => (prev === "pt" ? "en" : "pt"));
   }, []);
 
   const value = useMemo<LanguageContextValue>(

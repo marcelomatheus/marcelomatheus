@@ -1,4 +1,4 @@
-import { FooterIconId, SkillIconId, TechIconId, type Language, type PortfolioCopy } from "./interfaces/translations";
+import { FooterIconId, SkillIconId, type Language, type PortfolioCopy } from "./interfaces/translations";
 
 export * from "./interfaces/translations";
 
@@ -13,83 +13,51 @@ export const translations: Record<Language, PortfolioCopy> = {
     },
     hero: {
       eyebrow: "Junior Software Engineer",
-      title: "High-performance solutions focused on quality.",
+      title: "Software systems with sharp execution and durable design.",
       subtitle:
-        "Full Stack Developer (JS/TS). I build scalable architectures, robust CI/CD pipelines, and secure systems.",
+        "Full Stack Developer building reliable products with React, Python, TypeScript, and infrastructure-minded engineering.",
       primaryCta: "View Projects",
       secondaryCta: "Let’s Talk",
-      trustedBy: "Trusted by innovative companies and academia",
+      trustedBy: "Building fintech, platform, and product experiences end to end.",
       stats: [
-        { label: "Years coding", value: "1.5+" },
-        { label: "Projects delivered", value: "5+" },
+        { label: "Years coding", value: "2+" },
+        { label: "Projects delivered", value: "8+" },
         { label: "Community impact", value: "Unicoder" },
       ],
-      techOrbit: {
-        instruction: "Rotate the orbit to change the focus.",
-        items: [
+      carousel: {
+        instruction: "Drag or use the arrows to explore the stack.",
+        slides: [
           {
-            id: TechIconId.NestJS, 
-            name: "NestJS",
-            focus: "Backend Framework",
+            title: "React + Next.js",
+            label: "Frontend Systems",
             summary:
-              "Efficient, scalable server-side applications with modular architecture.",
-            highlights: ["Modules", "Guards", "Dependency Injection"],
+              "Interfaces with strong motion, responsive composition, and clean product structure for fast navigation.",
+            highlights: ["Design Systems", "SSR", "Interactive UI"],
+            theme: "ember",
           },
           {
-            id: TechIconId.Next,
-            name: "Next.js",
-            focus: "Fullstack React",
+            title: "Python",
+            label: "Business Logic",
             summary:
-              "Web apps focused on performance, SSR, and API integration.",
-            highlights: ["SSR", "API Routes", "Performance"],
+              "Reliable backend flows and maintainable services focused on business rules, integrations, and secure delivery.",
+            highlights: ["APIs", "Automation", "Maintainability"],
+            theme: "graphite",
           },
           {
-            id: TechIconId.Node,
-            name: "Node.js",
-            focus: "Runtime",
+            title: "MongoDB",
+            label: "Data Layer",
             summary:
-              "Robust server-side logic and event-driven architecture.",
-            highlights: ["Events", "Streams", "API"],
+              "Flexible schemas and optimized persistence strategies for product evolution without losing operational clarity.",
+            highlights: ["Modeling", "Performance", "Scalability"],
+            theme: "ash",
           },
           {
-            id: TechIconId.Docker,
-            name: "Docker",
-            focus: "DevOps",
+            title: "TypeScript",
+            label: "Engineering Quality",
             summary:
-              "Containers, GitHub Actions, CI/CD pipelines, deploy, and auto-tests.",
-            highlights: ["CI/CD", "Actions", "Testing"],
-          },
-          {
-            id: TechIconId.Aws,
-            name: "AWS",
-            focus: "Cloud & Scale",
-            summary:
-              "Cloud infrastructure with ECS for optimized delivery flows.",
-            highlights: ["ECS", "Cloud", "Deploy"],
-          },
-          {
-            id: TechIconId.Messaging, 
-            name: "Messaging",
-            focus: "Async Systems",
-            summary:
-              "Decoupled architecture using queues for high throughput.",
-            highlights: ["BullMQ", "Kafka", "Resilience"],
-          },
-          {
-            id: TechIconId.TypeScript,
-            name: "TypeScript",
-            focus: "Type Safety",
-            summary:
-              "Strict typing and contracts for safer, maintainable codebases.",
-            highlights: ["Generics", "Interfaces", "Safety"],
-          },
-          {
-            id: TechIconId.Postgres,
-            name: "PostgreSQL",
-            focus: "Data",
-            summary:
-              "Relational modeling and optimization for high performance.",
-            highlights: ["SQL", "Prisma", "Modeling"],
+              "Typed contracts and predictable codebases that reduce regressions and keep teams shipping with confidence.",
+            highlights: ["Contracts", "Refactoring", "Safety"],
+            theme: "cinder",
           },
         ],
       },
@@ -100,7 +68,16 @@ export const translations: Record<Language, PortfolioCopy> = {
         "Junior Software Engineer passionate about DevOps, SOLID, and Agile.",
       timeline: [
         {
-          year: "2025",
+          period: "May 2026 - Present",
+          role: "Software Developer",
+          company: "Blips Ativos",
+          location: "Uberlandia, Minas Gerais, Brazil · Remote",
+          description:
+            "I work on the development and continuous evolution of the Blips Ativos platform, a credit fintech that finances and rents equipment for small and micro-entrepreneurs. My work includes end-to-end improvement, development, and maintenance using React, Python, and MongoDB, ensuring a scalable, secure platform with excellent usability for users.",
+          badges: ["React.js", "Python", "MongoDB"],
+        },
+        {
+          period: "2025",
           role: "Junior Software Engineer",
           company: "NOCORP LTDA",
           description:
@@ -108,7 +85,7 @@ export const translations: Record<Language, PortfolioCopy> = {
           badges: ["Nest.js", "CI/CD", "AWS"],
         },
         {
-          year: "2024",
+          period: "2024",
           role: "Full Stack Trainee",
           company: "NOCORP LTDA",
           description:
@@ -116,7 +93,7 @@ export const translations: Record<Language, PortfolioCopy> = {
           badges: ["React", "TS", "Marketplace"],
         },
         {
-          year: "2023",
+          period: "2023",
           role: "B.S. Information Systems",
           company: "Unimontes",
           description:
@@ -285,83 +262,51 @@ export const translations: Record<Language, PortfolioCopy> = {
     },
     hero: {
       eyebrow: "Engenheiro de Software Jr",
-      title: "Soluções de alto desempenho e qualidade.",
+      title: "Sistemas de software com execução precisa e design durável.",
       subtitle:
-        "Dev Full Stack (JS/TS). Construo arquiteturas escaláveis, pipelines CI/CD e sistemas seguros.",
+        "Desenvolvedor Full Stack criando produtos confiáveis com React, Python, TypeScript e engenharia orientada à escalabilidade.",
       primaryCta: "Ver projetos",
       secondaryCta: "Conversar",
-      trustedBy: "Projetos nacionais e internacionais",
+      trustedBy: "Construindo experiências de produto, plataforma e fintech de ponta a ponta.",
       stats: [
-        { label: "Anos programando", value: "1.5+" },
-        { label: "Projetos entregues", value: "5+" },
+        { label: "Anos programando", value: "2+" },
+        { label: "Projetos entregues", value: "8+" },
         { label: "Impacto comunidade", value: "Unicoder" },
       ],
-      techOrbit: {
-        instruction: "Gire a órbita para mudar o foco.",
-        items: [
+      carousel: {
+        instruction: "Arraste ou use as setas para explorar a stack.",
+        slides: [
           {
-            id: TechIconId.NestJS, 
-            name: "NestJS",
-            focus: "Framework Backend",
+            title: "React + Next.js",
+            label: "Sistemas Frontend",
             summary:
-              "Aplicações server-side eficientes e escaláveis com arquitetura modular.",
-            highlights: ["Módulos", "Guards", "Injeção de Dep."],
+              "Interfaces com motion forte, composição responsiva e estrutura de produto limpa para navegação rápida.",
+            highlights: ["Design Systems", "SSR", "UI Interativa"],
+            theme: "ember",
           },
           {
-            id: TechIconId.Next,
-            name: "Next.js",
-            focus: "Fullstack React",
+            title: "Python",
+            label: "Lógica de Negócio",
             summary:
-              "Apps web focados em performance, SSR e integração de APIs.",
-            highlights: ["SSR", "API Routes", "DX"],
+              "Fluxos backend confiáveis e serviços manuteníveis focados em regras de negócio, integrações e entrega segura.",
+            highlights: ["APIs", "Automação", "Manutenibilidade"],
+            theme: "graphite",
           },
           {
-            id: TechIconId.Node,
-            name: "Node.js",
-            focus: "Runtime",
+            title: "MongoDB",
+            label: "Camada de Dados",
             summary:
-              "Lógica server-side robusta e arquitetura orientada a eventos.",
-            highlights: ["Eventos", "Streams", "API"],
+              "Schemas flexíveis e estratégias de persistência otimizadas para evolução de produto sem perder clareza operacional.",
+            highlights: ["Modelagem", "Performance", "Escala"],
+            theme: "ash",
           },
           {
-            id: TechIconId.Docker,
-            name: "Docker",
-            focus: "DevOps",
+            title: "TypeScript",
+            label: "Qualidade de Engenharia",
             summary:
-              "Containers, GitHub Actions, pipelines de CI/CD, deploy e testes automatizados.",
-            highlights: ["CI/CD", "Actions", "Testes"],
-          },
-          {
-            id: TechIconId.Aws,
-            name: "AWS",
-            focus: "Infra & Escala",
-            summary:
-              "Infraestrutura cloud com ECS para fluxos de entrega otimizados.",
-            highlights: ["ECS", "Cloud", "Deploy"],
-          },
-          {
-            id: TechIconId.Messaging, 
-            name: "Mensageria",
-            focus: "Sistemas Assíncronos",
-            summary:
-              "Arquiteturas desacopladas usando filas para alto tráfego.",
-            highlights: ["BullMQ", "Kafka", "Resiliência"],
-          },
-          {
-            id: TechIconId.TypeScript,
-            name: "TypeScript",
-            focus: "Tipagem",
-            summary:
-              "Código seguro com contratos claros para maior manutenibilidade.",
-            highlights: ["Generics", "Interfaces", "DX"],
-          },
-          {
-            id: TechIconId.Postgres,
-            name: "PostgreSQL",
-            focus: "Dados",
-            summary:
-              "Modelagem relacional confiável e otimização para performance.",
-            highlights: ["SQL", "Prisma", "Modelagem"],
+              "Contratos tipados e codebases previsíveis que reduzem regressões e mantêm o time entregando com segurança.",
+            highlights: ["Contratos", "Refatoração", "Segurança"],
+            theme: "cinder",
           },
         ],
       },
@@ -372,7 +317,16 @@ export const translations: Record<Language, PortfolioCopy> = {
         "Engenheiro de Software Jr focado em DevOps, SOLID e Agile.",
       timeline: [
         {
-          year: "2025",
+          period: "mai de 2026 - o momento",
+          role: "Desenvolvedor de Software",
+          company: "Blips Ativos",
+          location: "Uberlândia, Minas Gerais, Brasil · Remoto",
+          description:
+            "Atuo na evolução contínua da plataforma Blips Ativos, fintech de crédito que financia e aluga equipamentos para pequenos e microempreendedores.",
+          badges: ["React.js", "Python", "MongoDB"],
+        },
+        {
+          period: "2025",
           role: "Engenheiro de Software Jr",
           company: "NOCORP LTDA",
           description:
@@ -380,7 +334,7 @@ export const translations: Record<Language, PortfolioCopy> = {
           badges: ["Nest.js", "CI/CD", "AWS"],
         },
         {
-          year: "2024",
+          period: "2024",
           role: "Desenvolvedor Trainee",
           company: "NOCORP LTDA",
           description:
@@ -388,7 +342,7 @@ export const translations: Record<Language, PortfolioCopy> = {
           badges: ["React", "TS", "Marketplace"],
         },
         {
-          year: "2023",
+          period: "2023",
           role: "Bacharelando em Sistemas",
           company: "Unimontes",
           description:

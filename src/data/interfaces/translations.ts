@@ -1,16 +1,5 @@
 export type Language = "en" | "pt";
 
-export enum TechIconId {
-	Next = "next",
-	Node = "node",
-	Docker = "docker",
-	Aws = "aws",
-	Postgres = "postgres",
-	TypeScript = "typescript",
-	NestJS = "nestjs",
-	Messaging = "messaging",
-}
-
 export enum SkillIconId {
 	Server = "Server",
 	Sparkles = "Sparkles",
@@ -25,23 +14,24 @@ export enum FooterIconId {
 	Mail = "mail",
 }
 
-export interface TechOrbitItem {
-	id: TechIconId;
-	name: string;
-	focus: string;
+export interface HeroCarouselSlide {
+	title: string;
+	label: string;
 	summary: string;
 	highlights: string[];
+	theme?: "ember" | "graphite" | "ash" | "cinder";
 }
 
-export interface TechOrbitCopy {
+export interface HeroCarouselCopy {
 	instruction: string;
-	items: TechOrbitItem[];
+	slides: HeroCarouselSlide[];
 }
 
 export interface TimelineItem {
-	year: string;
+	period: string;
 	role: string;
 	company: string;
+	location?: string;
 	description: string;
 	badges: string[];
 }
@@ -109,7 +99,7 @@ export interface PortfolioCopy {
 		secondaryCta: string;
 		trustedBy: string;
 		stats: Array<{ label: string; value: string }>;
-		techOrbit: TechOrbitCopy;
+		carousel: HeroCarouselCopy;
 	};
 	about: {
 		title: string;
