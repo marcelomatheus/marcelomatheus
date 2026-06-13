@@ -43,13 +43,10 @@ export function Hero() {
               {t<string>("hero.secondaryCta")}
             </Button>
           </RevealOnScroll>
-          <RevealOnScroll delay={0.15} className="max-w-lg rounded-[2rem] border border-white/8 bg-surface px-5 py-5 shadow-panel">
-            <p className="text-sm leading-7 text-muted">{t<string>("hero.trustedBy")}</p>
-          </RevealOnScroll>
           <RevealOnScroll delay={0.2} className="grid gap-4 text-sm text-muted sm:grid-cols-3">
             {stats?.map((stat) => (
               <div key={stat.label} className="noise-card rounded-[1.75rem] border border-white/8 bg-surface px-5 py-5 shadow-panel">
-                <p className="text-3xl font-semibold text-white lg:text-4xl">{stat.value}</p>
+                <p className="text-xl font-semibold text-white">{stat.value}</p>
                 <p className="mt-2 text-sm text-muted">{stat.label}</p>
               </div>
             ))}
