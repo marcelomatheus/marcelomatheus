@@ -28,36 +28,49 @@ export const translations: Record<Language, PortfolioCopy> = {
         instruction: "Drag or use the arrows to explore the stack.",
         slides: [
           {
-            title: "React + Next.js",
+            title: "React",
             label: "Frontend Systems",
+            icon: "react",
             summary:
-              "Interfaces with strong motion, responsive composition, and clean product structure for fast navigation.",
-            highlights: ["Design Systems", "SSR", "Interactive UI"],
+              "Expressive interfaces with reusable component systems, motion, and clean product architecture.",
+            highlights: ["Design Systems", "Interactive UI", "Reusable Components"],
             theme: "ember",
           },
           {
-            title: "Python",
-            label: "Business Logic",
+            title: "Next.js",
+            label: "Product Delivery",
+            icon: "next",
             summary:
-              "Reliable backend flows and maintainable services focused on business rules, integrations, and secure delivery.",
-            highlights: ["APIs", "Automation", "Maintainability"],
+              "Fast app delivery with server rendering, routing, and production-ready architecture for web products.",
+            highlights: ["SSR", "Routing", "Performance"],
             theme: "graphite",
           },
           {
-            title: "MongoDB",
-            label: "Data Layer",
+            title: "Node.js",
+            label: "Backend Runtime",
+            icon: "node",
             summary:
-              "Flexible schemas and optimized persistence strategies for product evolution without losing operational clarity.",
-            highlights: ["Modeling", "Performance", "Scalability"],
+              "Reliable services, APIs, and async flows designed to keep business operations responsive and scalable.",
+            highlights: ["APIs", "Async Flows", "Scalability"],
             theme: "ash",
           },
           {
             title: "TypeScript",
             label: "Engineering Quality",
+            icon: "typescript",
             summary:
               "Typed contracts and predictable codebases that reduce regressions and keep teams shipping with confidence.",
             highlights: ["Contracts", "Refactoring", "Safety"],
             theme: "cinder",
+          },
+          {
+            title: "Docker",
+            label: "Operational Consistency",
+            icon: "docker",
+            summary:
+              "Containerized environments that keep delivery stable from local development to CI/CD and deployment.",
+            highlights: ["Containers", "CI/CD", "Deployment"],
+            theme: "ember",
           },
         ],
       },
@@ -264,7 +277,7 @@ export const translations: Record<Language, PortfolioCopy> = {
       eyebrow: "Engenheiro de Software Jr",
       title: "Sistemas de software com execução precisa e design durável.",
       subtitle:
-        "Desenvolvedor Full Stack criando produtos confiáveis com React, Python, TypeScript e engenharia orientada à escalabilidade.",
+        "Desenvolvedor Full Stack criando produtos financeiros confiáveis com React, Python, TypeScript e engenharia orientada à escalabilidade.",
       primaryCta: "Ver projetos",
       secondaryCta: "Conversar",
       trustedBy: "Construindo experiências de produto, plataforma e fintech de ponta a ponta.",
@@ -277,36 +290,49 @@ export const translations: Record<Language, PortfolioCopy> = {
         instruction: "Arraste ou use as setas para explorar a stack.",
         slides: [
           {
-            title: "React + Next.js",
+            title: "React",
             label: "Sistemas Frontend",
+            icon: "react",
             summary:
-              "Interfaces com motion forte, composição responsiva e estrutura de produto limpa para navegação rápida.",
-            highlights: ["Design Systems", "SSR", "UI Interativa"],
+              "Interfaces expressivas com sistemas de componentes reutilizáveis, motion e arquitetura de produto limpa.",
+            highlights: ["Design Systems", "UI Interativa", "Componentes Reutilizáveis"],
             theme: "ember",
           },
           {
-            title: "Python",
-            label: "Lógica de Negócio",
+            title: "Next.js",
+            label: "Entrega de Produto",
+            icon: "next",
             summary:
-              "Fluxos backend confiáveis e serviços manuteníveis focados em regras de negócio, integrações e entrega segura.",
-            highlights: ["APIs", "Automação", "Manutenibilidade"],
+              "Entrega rápida de aplicações com renderização server-side, roteamento e arquitetura pronta para produção.",
+            highlights: ["SSR", "Routing", "Performance"],
             theme: "graphite",
           },
           {
-            title: "MongoDB",
-            label: "Camada de Dados",
+            title: "Node.js",
+            label: "Runtime Backend",
+            icon: "node",
             summary:
-              "Schemas flexíveis e estratégias de persistência otimizadas para evolução de produto sem perder clareza operacional.",
-            highlights: ["Modelagem", "Performance", "Escala"],
+              "Serviços, APIs e fluxos assíncronos confiáveis para manter operações de negócio responsivas e escaláveis.",
+            highlights: ["APIs", "Fluxos Assíncronos", "Escala"],
             theme: "ash",
           },
           {
             title: "TypeScript",
             label: "Qualidade de Engenharia",
+            icon: "typescript",
             summary:
               "Contratos tipados e codebases previsíveis que reduzem regressões e mantêm o time entregando com segurança.",
             highlights: ["Contratos", "Refatoração", "Segurança"],
             theme: "cinder",
+          },
+          {
+            title: "Docker",
+            label: "Consistência Operacional",
+            icon: "docker",
+            summary:
+              "Ambientes containerizados que mantêm a entrega estável do desenvolvimento local ao CI/CD e deploy.",
+            highlights: ["Containers", "CI/CD", "Deploy"],
+            theme: "ember",
           },
         ],
       },

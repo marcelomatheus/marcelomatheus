@@ -14,9 +14,20 @@ export enum FooterIconId {
 	Mail = "mail",
 }
 
+export type HeroCarouselIconId =
+	| "react"
+	| "next"
+	| "node"
+	| "docker"
+	| "aws"
+	| "framer"
+	| "postgres"
+	| "typescript";
+
 export interface HeroCarouselSlide {
 	title: string;
 	label: string;
+	icon: HeroCarouselIconId;
 	summary: string;
 	highlights: string[];
 	theme?: "ember" | "graphite" | "ash" | "cinder";
