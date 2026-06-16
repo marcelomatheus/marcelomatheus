@@ -4,10 +4,10 @@ import { useCallback, useEffect, useMemo, useState } from "react";
 import type { ComponentType } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { ArrowLeft, ArrowRight } from "lucide-react";
-import type { HeroCarouselSlide } from "@/data/translations";
+import type { HeroCarouselCopy, HeroCarouselSlide } from "@/data/translations";
+import { useLanguage } from "@/contexts/LanguageContext";
 import { TECH_ICONS } from "@/lib/constants";
 import { cn } from "@/lib/utils";
-import type { HeroCarouselProps } from "../interfaces/sections";
 
 const THEMES = {
   ember: {
@@ -37,53 +37,48 @@ const getWrappedIndex = (index: number, length: number) => {
   return (index + length) % length;
 };
 
-const getRelativePosition = (index: number, activeIndex: number, length: number) => {
+const getOffset = (index: number, activeIndex: number, total: number) => {
   let offset = index - activeIndex;
-  const half = Math.floor(length / 2);
 
-  if (offset > half) offset -= length;
-  if (offset < -half) offset += length;
+  if (offset > Math.floor(total / 2)) offset -= total;
+  if (offset < -Math.floor(total / 2)) offset += total;
 
   return offset;
 };
 
-function CarouselCard({
+function StackCard({
   slide,
   offset,
-  isActive,
-  onClick,
+  onSelect,
 }: {
   slide: HeroCarouselSlide;
   offset: number;
-  isActive: boolean;
-  onClick: () => void;
+  onSelect: () => void;
 }) {
   const theme = THEMES[slide.theme ?? "ember"];
   const Icon = TECH_ICONS[slide.icon] as ComponentType<{ className?: string }>;
   const distance = Math.abs(offset);
-  const x = offset * 32;
-  const y = distance * 12;
-  const rotateZ = offset * 5;
-  const rotateY = offset * -12;
-  const scale = 1 - distance * 0.08;
-  const opacity = 1 - distance * 0.22;
-  const zIndex = 20 - distance;
+  const isCenter = offset === 0;
 
   return (
-    <motion.article
-      className={cn(
-        "noise-card absolute left-1/2 top-1/2 h-[24rem] w-[16rem] -translate-x-1/2 -translate-y-1/2 overflow-hidden rounded-[2rem] border border-white/10 bg-[#efebe7] shadow-panel sm:h-[27rem] sm:w-[18rem] lg:h-[30rem] lg:w-[20rem]",
-        !isActive && "select-none",
-      )}
+    <motion.button
+      type="button"
+      onClick={onSelect}
+      className="noise-card absolute left-1/2 top-1/2 h-[24rem] w-[16rem] cursor-pointer overflow-hidden rounded-[2rem] border border-white/10 bg-[#efebe7] text-left shadow-panel outline-none sm:h-[27rem] sm:w-[18rem] lg:h-[30rem] lg:w-[20rem]"
+      style={{
+        transformStyle: "preserve-3d",
+        transformOrigin: "center center",
+      }}
       initial={false}
       animate={{
-        x: `${x}%`,
-        y,
-        scale,
-        rotateZ,
-        rotateY,
-        opacity,
-        zIndex,
+        x: `${offset * 64}%`,
+        y: distance * 18,
+        z: distance * -60,
+        rotateZ: offset * 8,
+        rotateY: offset * -15,
+        scale: 1 - distance * 0.05,
+        opacity: 1 - distance * 0.15,
+        zIndex: 20 - distance,
       }}
       transition={{
         type: "spring",
@@ -91,9 +86,10 @@ function CarouselCard({
         damping: 30,
         mass: 1,
       }}
-      aria-hidden={!isActive}
-      onClick={onClick}
+      whileTap={{ scale: isCenter ? 0.985 : 0.97 }}
+      aria-pressed={isCenter}
     >
+      <div className="absolute inset-0 -translate-x-1/2 -translate-y-1/2" />
       <div className={cn("absolute inset-x-0 top-0 h-[46%] bg-gradient-to-br", theme.top)} aria-hidden />
       <div
         className="absolute inset-x-0 top-0 h-[46%] bg-[linear-gradient(112deg,rgba(255,255,255,0.22)_0%,rgba(255,255,255,0.12)_18%,rgba(0,0,0,0)_18%,rgba(0,0,0,0)_34%,rgba(255,255,255,0.08)_34%,rgba(255,255,255,0.08)_50%,rgba(0,0,0,0)_50%,rgba(0,0,0,0)_68%,rgba(255,255,255,0.1)_68%,rgba(255,255,255,0.1)_84%,rgba(0,0,0,0)_84%)]"
@@ -106,9 +102,9 @@ function CarouselCard({
       </div>
       <motion.div
         initial={false}
-        animate={{ opacity: isActive ? 0 : 0.12 + distance * 0.08 }}
+        animate={{ opacity: isCenter ? 0 : 0.18 + distance * 0.08 }}
         transition={{ duration: 0.35 }}
-        className="absolute inset-0 bg-black rounded-[2rem] pointer-events-none"
+        className="absolute inset-0 bg-black/30"
       />
 
       <div className="relative flex h-full flex-col justify-between px-5 py-5 sm:px-6 sm:py-6">
@@ -160,101 +156,71 @@ function CarouselCard({
           </div>
         </div>
       </div>
-    </motion.article>
+    </motion.button>
   );
 }
 
-export function HeroCarousel({ copy }: HeroCarouselProps) {
+export function HeroCarousel() {
+  const { t } = useLanguage();
+  const copy = t<HeroCarouselCopy>("hero.carousel");
   const slides = useMemo(() => copy?.slides ?? [], [copy]);
-  const [activeIndex, setActiveIndex] = useState(0);
-  const [isPaused, setIsPaused] = useState(false);
+  const [activeIndex, setActiveIndex] = useState(2);
+  const [isHovered, setIsHovered] = useState(false);
 
-  const goTo = useCallback(
-    (direction: 1 | -1) => {
-      setActiveIndex((current) => getWrappedIndex(current + direction, slides.length));
-    },
-    [slides.length],
-  );
+  const nextSlide = useCallback(() => {
+    setActiveIndex((current) => getWrappedIndex(current + 1, slides.length));
+  }, [slides.length]);
+
+  const previousSlide = useCallback(() => {
+    setActiveIndex((current) => getWrappedIndex(current - 1, slides.length));
+  }, [slides.length]);
 
   useEffect(() => {
-    if (slides.length <= 1 || isPaused) return undefined;
-
-    const timer = window.setInterval(() => {
-      goTo(1);
-    }, 4200);
-
-    return () => window.clearInterval(timer);
-  }, [goTo, isPaused, slides.length]);
-
-  const visibleSlides = slides
-    .map((slide, index) => {
-      const offset = getRelativePosition(index, activeIndex, slides.length);
-      return Math.abs(offset) > 2
-        ? null
-        : {
-            slide: {
-              ...slide,
-            },
-            index,
-            offset,
-            onClick: () => setActiveIndex(index),
-          };
-    })
-    .filter(
-      (
-        item,
-      ): item is {
-        slide: HeroCarouselSlide;
-        index: number;
-        offset: number;
-        onClick: () => void;
-      } => item !== null,
-    );
+    if (slides.length <= 1 || isHovered) return undefined;
+    const interval = window.setInterval(nextSlide, 3500);
+    return () => window.clearInterval(interval);
+  }, [isHovered, nextSlide, slides.length]);
 
   if (!slides.length) return null;
 
   return (
-    <div
-      className="relative mx-auto w-full max-w-[52rem]"
-      onMouseEnter={() => setIsPaused(true)}
-      onMouseLeave={() => setIsPaused(false)}
-    >
-      <div className="absolute inset-x-[20%] top-[10%] h-32 rounded-full bg-primary/15 blur-3xl" aria-hidden />
+    <div className="relative w-full max-w-5xl">
+      <div className="pointer-events-none absolute inset-x-[14%] top-10 h-40 rounded-full bg-primary/10 blur-3xl" aria-hidden />
 
-      <motion.div
-        className="relative h-[30rem] overflow-hidden rounded-[2.5rem] active:cursor-grabbing sm:h-[34rem] lg:h-[37rem]"
+      <div
+        className="relative h-[460px] w-full overflow-hidden sm:h-[500px] lg:h-[540px]"
         style={{ perspective: 1200 }}
-        drag="x"
-        dragConstraints={{ left: 0, right: 0 }}
-        dragElastic={0.06}
-        onDragStart={() => setIsPaused(true)}
-        onDragEnd={(_, info) => {
-          setIsPaused(false);
-          if (info.offset.x <= -70) goTo(1);
-          if (info.offset.x >= 70) goTo(-1);
-        }}
+        onMouseEnter={() => setIsHovered(true)}
+        onMouseLeave={() => setIsHovered(false)}
       >
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(255,125,58,0.07),transparent_55%)]" aria-hidden />
-        <div className="absolute inset-x-0 bottom-10 h-20 rounded-full bg-[radial-gradient(circle,rgba(255,255,255,0.05),transparent_68%)] blur-2xl" aria-hidden />
+        <div className="absolute inset-x-0 bottom-8 h-20 rounded-full bg-[radial-gradient(circle,rgba(255,255,255,0.05),transparent_68%)] blur-2xl" aria-hidden />
+
         <AnimatePresence initial={false}>
-          {visibleSlides.map(({ slide, index, offset, onClick }) => (
-            <CarouselCard
-              key={`${slide.title}-${index}`}
-              slide={slide}
-              offset={offset}
-              isActive={offset === 0}
-              onClick={onClick}
-            />
-          ))}
+          {slides.map((slide, index) => {
+            const offset = getOffset(index, activeIndex, slides.length);
+            const isVisible = Math.abs(offset) <= 2;
+
+            if (!isVisible) return null;
+
+            return (
+              <StackCard
+                key={`${slide.title}-${index}`}
+                slide={slide}
+                offset={offset}
+                onSelect={() => setActiveIndex(index)}
+              />
+            );
+          })}
         </AnimatePresence>
-      </motion.div>
+      </div>
 
       <div className="mt-4 flex items-center justify-between gap-4">
-        <p className="text-xs uppercase tracking-[0.28em] text-muted">{copy?.instruction}</p>
+        <p className="max-w-sm text-xs uppercase tracking-[0.28em] text-muted">{copy?.instruction}</p>
         <div className="flex items-center gap-2">
           <button
             type="button"
-            onClick={() => goTo(-1)}
+            onClick={previousSlide}
             className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-white/10 bg-surface text-white/85 transition hover:border-primary/50 hover:text-white"
             aria-label="Previous slide"
           >
@@ -262,7 +228,7 @@ export function HeroCarousel({ copy }: HeroCarouselProps) {
           </button>
           <button
             type="button"
-            onClick={() => goTo(1)}
+            onClick={nextSlide}
             className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-white/10 bg-surface text-white/85 transition hover:border-primary/50 hover:text-white"
             aria-label="Next slide"
           >

@@ -5,12 +5,10 @@ import { Eyebrow, GradientHeading, SectionParagraph } from "@/components/ui/Typo
 import { RevealOnScroll } from "@/components/motion/RevealOnScroll";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { HeroCarousel } from "@/components/sections/HeroCarousel";
-import type { HeroCarouselCopy } from "@/data/translations";
 
 export function Hero() {
   const { t } = useLanguage();
   const stats = t<Array<{ label: string; value: string }>>("hero.stats");
-  const carouselCopy = t<HeroCarouselCopy>("hero.carousel");
 
   return (
     <section id="hero" className="relative isolate flex min-h-screen items-center px-6 pb-16 pt-32">
@@ -53,10 +51,7 @@ export function Hero() {
           </RevealOnScroll>
         </div>
         <div className="flex w-full justify-center lg:justify-end">
-          <div className="relative w-full max-w-[42rem]">
-            <div className="pointer-events-none absolute inset-x-10 top-16 h-48 rounded-full bg-primary/10 blur-3xl" aria-hidden />
-            <HeroCarousel copy={carouselCopy} />
-          </div>
+          <HeroCarousel />
         </div>
       </div>
     </section>
