@@ -1,8 +1,4 @@
-import type { HeroCarouselCopy, ProjectCardContent, SkillIconId, TimelineItem } from "@/data/translations";
-
-export interface HeroCarouselProps {
-  copy?: HeroCarouselCopy;
-}
+import type { ProjectCardContent, SkillIconId, TimelineItem } from "@/data/translations";
 
 export interface ProjectModalProps {
   project: ProjectCardContent | null;
