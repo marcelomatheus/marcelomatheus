@@ -20,7 +20,7 @@ I am a **Software Engineer**, passionate about Software Engineering, system arch
 
 -  Currently building scalable web applications, **SaaS platforms, CRM systems, and microservices**.
 -  My core stack revolves around the **JavaScript/TypeScript ecosystem** (React, Next.js, Node.js, NestJS), but I also build solutions using **Python** and cloud deployments on **AWS**.
--  I run a **YouTube channel** focused on programming topics, where I share my learning journey, talk about code, and help others in the tech community.
+-  I run a **YouTube channel** focused on programming topics, where I share my learning journey, talk about code, business, and help others in the tech community.
 
 
 ## Tech Stack
