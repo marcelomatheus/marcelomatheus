@@ -28,7 +28,7 @@ export function ParticlesBackground() {
           density: { enable: true, width: 1200 },
         },
         color: {
-          value: ["#ffffff", "#d4d4d4", "#ff7d3a"],
+          value: ["#fff7ea", "#e8cda8", "#c18c4a"],
         },
         opacity: {
           value: 0.12,

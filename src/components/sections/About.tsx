@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import { RevealOnScroll } from "@/components/motion/RevealOnScroll";
 import { Eyebrow, GradientHeading } from "@/components/ui/Typography";
 import { useLanguage } from "@/contexts/LanguageContext";
@@ -12,31 +11,19 @@ export function About() {
   const timeline = t<TimelineItem[]>("about.timeline");
 
   return (
-    <section id="about" className="mx-auto max-w-6xl px-6 py-24">
+    <section id="about" className="mx-auto max-w-7xl px-6 py-24">
       <RevealOnScroll>
-        <div className="grid gap-10 md:grid-cols-[2fr_3fr] ">
-          <div className="noise-card relative min-h-[480px] overflow-hidden rounded-[2rem] border border-white/8 bg-surface shadow-panel">
-            <div
-              className="relative h-full min-h-[24rem] overflow-hidden rounded-[1.5rem]"
-              
-            >
-              <Image
-                src="/me.png"
-                alt="Foto de Marcelo Matheus"
-                fill
-                className="object-cover"
-                priority
-              />
-            </div>
-            <div
-              className="pointer-events-none absolute inset-0 bg-[linear-gradient(180deg,rgba(0,0,0,0)_45%,rgba(10,10,10,0.88)_100%)]"
-              aria-hidden
-            />
-            <p className="absolute bottom-6 left-6 right-6 text-sm text-muted">{t<string>("about.caption")}</p>
+        <div className="grid gap-10 lg:grid-cols-[0.75fr_1.25fr]">
+          <div className="noise-card relative overflow-hidden rounded-[1rem] border border-primary/18 bg-surface p-7 shadow-panel">
+            <span className="font-display text-[8rem] leading-none text-primary/25">ABOUT</span>
+            <Eyebrow className="mt-8">{t<string>("about.title")}</Eyebrow>
+            <GradientHeading className="mb-6 mt-2 font-display text-6xl leading-none tracking-wide">
+              {t<string>("about.subtitle")}
+            </GradientHeading>
+            <p className="text-sm leading-7 text-muted">{t<string>("about.caption")}</p>
+            <div className="mt-10 h-px w-full bg-gradient-to-r from-primary via-primary/20 to-transparent" aria-hidden />
           </div>
           <div>
-            <Eyebrow>{t<string>("about.title")}</Eyebrow>
-            <GradientHeading className="mb-6 mt-2 text-4xl">{t<string>("about.subtitle")}</GradientHeading>
             <div className="relative pl-6">
               <span className="absolute left-0 top-0 h-full w-px bg-gradient-to-b from-primary via-white/20 to-transparent" />
               <div className="space-y-6">
