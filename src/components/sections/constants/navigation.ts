@@ -8,9 +8,9 @@ export enum NavKey {
 
 export const NAV_ORDER: NavKey[] = [
   NavKey.Home,
-  NavKey.About,
-  NavKey.Skills,
   NavKey.Projects,
+  NavKey.Skills,
+  NavKey.About,
   NavKey.Contact,
 ];
 
