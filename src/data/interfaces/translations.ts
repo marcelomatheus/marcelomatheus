@@ -73,6 +73,36 @@ export interface ProjectCardContent {
 	};
 }
 
+export interface ClientProjectContent {
+	slug: string;
+	title: string;
+	business: string;
+	pain: string;
+	solution: string;
+	features: string[];
+	gallery: string[];
+}
+
+export interface VideoShowcaseCopy {
+	title: string;
+	subtitle: string;
+	cta: string;
+	url: string;
+}
+
+export interface ArticleCardContent {
+	title: string;
+	description: string;
+	category: string;
+	url: string;
+}
+
+export interface ArticlesCopy {
+	title: string;
+	subtitle: string;
+	cards: ArticleCardContent[];
+}
+
 export interface FooterLink {
 	label: string;
 	href: string;
@@ -136,6 +166,13 @@ export interface PortfolioCopy {
 		};
 		cards: ProjectCardContent[];
 	};
+	clientProjects: {
+		title: string;
+		subtitle: string;
+		cards: ClientProjectContent[];
+	};
+	videoShowcase: VideoShowcaseCopy;
+	articles: ArticlesCopy;
 	footer: FooterCopy;
 	common: {
 		close: string;
