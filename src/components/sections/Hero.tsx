@@ -11,10 +11,10 @@ const heroText = {
   pt: {
     role: "Software Engineer & Digital Builder",
     kicker: "Portfólio 2026",
-    title: "PORTFOLIO",
+    title: "MARCELO",
     subtitle:
       "Eu construo produtos digitais com engenharia sólida, automação, IA e interfaces que parecem tão boas quanto funcionam.",
-    location: "Montes Claros, MG - disponível remoto",
+    location: "Montes Claros, MG",
     github: "GitHub",
     contact: "Contato",
     articles: "Artigos",
@@ -22,10 +22,10 @@ const heroText = {
   en: {
     role: "Software Engineer & Digital Builder",
     kicker: "Portfolio 2026",
-    title: "PORTFOLIO",
+    title: "MARCELO",
     subtitle:
       "I build digital products with solid engineering, automation, AI, and interfaces that feel as good as they work.",
-    location: "Montes Claros, MG - remote available",
+    location: "Montes Claros, MG",
     github: "GitHub",
     contact: "Contact",
     articles: "Articles",
