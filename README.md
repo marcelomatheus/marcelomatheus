@@ -1,5 +1,5 @@
 <h1 align="center">Hi there, I'm Marcelo! 🤖 </h1>
-<h3 align="center">Software Engineer | Full Stack Developer</h3>
+<h3 align="center">Software Engineer and Full Stack Developer</h3>
 
 <p align="center">
   <a href="https://www.linkedin.com/in/marcelooliveiradev/" target="_blank">
