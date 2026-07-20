@@ -14,7 +14,7 @@ const heroText = {
     title: "MARCELO",
     subtitle:
       "Eu construo produtos digitais com engenharia sólida, automação, IA e interfaces que parecem tão boas quanto funcionam.",
-    location: "Montes Claros, MG",
+    location: "Brasil",
     github: "GitHub",
     contact: "Contato",
     articles: "Artigos",
@@ -25,7 +25,7 @@ const heroText = {
     title: "MARCELO",
     subtitle:
       "I build digital products with solid engineering, automation, AI, and interfaces that feel as good as they work.",
-    location: "Montes Claros, MG",
+    location: "Brazil",
     github: "GitHub",
     contact: "Contact",
     articles: "Articles",
