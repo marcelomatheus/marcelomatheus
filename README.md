@@ -24,6 +24,7 @@ I am a **Software Engineer**, passionate about Software Engineering, system arch
 
 
 ## Tech Stack
+
 <div align="left">
 
 [![Minhas Habilidades](https://skillicons.dev/icons?i=ts,nodejs,nest,next,python,mongodb,postgresql
